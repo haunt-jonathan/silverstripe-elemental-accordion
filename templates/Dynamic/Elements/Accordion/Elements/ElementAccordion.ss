@@ -22,6 +22,7 @@
                     </div>
                 </div>
             <% end_loop %>
+            <% if $Panels.Count > 1 %><button class="accordion-expand-all">Expand All</button><button class="accordion-collapse-all">Collapse All</button><% end_if %>
         </div>
     <% end_if %>
 </div>
