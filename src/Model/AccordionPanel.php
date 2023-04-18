@@ -69,10 +69,12 @@ class AccordionPanel extends BaseElementObject
             $fields->removeByName([
                 'Sort',
                 'AccordionID',
+                'Image',
+                'ElementLinkID'
             ]);
 
-            $fields->dataFieldByName('Image')
-                ->setFolderName('Uploads/Elements/Accordions');
+            /*$fields->dataFieldByName('Image')
+                ->setFolderName('Uploads/Elements/Accordions');*/
         });
 
         return parent::getCMSFields();

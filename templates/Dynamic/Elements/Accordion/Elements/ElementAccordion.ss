@@ -2,9 +2,10 @@
     <% if $Content %>$Content<% end_if %>
     <% if $Panels %>
         <div id="accordion-{$ID}" class="accordion" role="tablist">
+            <% if $Panels.Count > 1 %><button class="accordion-expand-all">Expand All</button><button class="accordion-collapse-all">Collapse All</button><% end_if %>
             <% loop $Panels %>
                 <h5>
-                    <button aria-expanded="false" id="accordion-item-{$ID}-id" aria-controls="accordion-item-{$ID}-content" class="accordion-item__toggle">
+                    <button aria-expanded="false" id="accordion-item-{$ID}-id" aria-controls="accordion-item-{$ID}-content" class="accordion-item__toggle pos$Pos">
                         <span class="title">$Title</span>
                         <span aria-hidden="true" class="accordion-item__toggle-indicator">
                             <img src="/resources/themes/base_dist/images/fa-plus.svg" class="accordion-item-question--icon accordion-item-question--icon-plus"></img>
@@ -22,7 +23,6 @@
                     </div>
                 </div>
             <% end_loop %>
-            <% if $Panels.Count > 1 %><button class="accordion-expand-all">Expand All</button><button class="accordion-collapse-all">Collapse All</button><% end_if %>
         </div>
     <% end_if %>
 </div>
